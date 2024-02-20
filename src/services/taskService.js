@@ -10,7 +10,6 @@ const createTaskService = async (data) => {
 
 const getAllTaskService = async(data) => {
     let result = null
-
     let query = aqp(data) 
     let filter = query.filter
     let limit = data.limit
