@@ -28,21 +28,10 @@ module.exports = {
                 .min(2)
                 .max(30)
                 .required(),
-        
-            // address: Joi.string(),
-        
-            // phone: Joi.string()
-            //         .pattern(new RegExp('^[0-9]{10,11}$')),
-        
-            // email: Joi.string()
-            //     .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }),
-        
-            // description: Joi.string(),
 
         })
         let check = schema.validate(customer, {abortEarly: false});
-        // console.log("===> ", check)
-        // return res.send("ok")
+
 
         let imgUrl = ""
         // Image Handle

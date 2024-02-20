@@ -22,17 +22,15 @@ const uploadSingleFile = async (fileObject) => {
 }
 
 const uploadMultiFile = async (fileObject) => {
-    console.log('dfsdfsdfs')
+    
     if (!Array.isArray(fileObject)) {
         
         fileObject = [fileObject];
     }
 
-    // Use the mv() method to place the file somewhere on your server
     for(let file = 0 ; file < fileObject.length; file++) {
-        console.log(fileObject[file].name)
         let uploadPath = path.resolve("src", "public", "images", fileObject[file].name);
-        console.log(uploadPath)
+      
         try {
             await fileObject[file].mv(uploadPath)
         } catch (err) {

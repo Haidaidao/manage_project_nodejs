@@ -97,7 +97,6 @@ const updateProjectService = async(data) => {
 
 const deleteProjectService = async(id) => {
     let result = null
-    console.log(id)
     result =  await Project.deleteById(id)
 
     return result

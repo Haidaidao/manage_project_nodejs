@@ -37,7 +37,6 @@ const putUpdateUserAPI = async (req, res) => {
 
 const deleteUserAPI = async (req, res) => {
     const id = req.body.id
-    console.log(id)
     const user = await User.deleteOne({
         _id: id
     })
@@ -55,7 +54,7 @@ const postUploadSingleFileAPI = async(req, res) => {
     }
 
     await uploadMultiFile(req.files.image)
-    // console.log(">>>>>> ", result)
+   
     return res.send('OK')
 }
 

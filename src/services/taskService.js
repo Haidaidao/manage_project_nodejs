@@ -16,9 +16,6 @@ const getAllTaskService = async(data) => {
     let limit = data.limit
     let page = filter.page
     let offset = (page-1) * limit
-    console.log(filter)
-    console.log(offset)
-    console.log(limit)
 
     delete filter.page
 

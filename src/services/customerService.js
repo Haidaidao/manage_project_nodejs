@@ -40,19 +40,13 @@ const getAllCustomersService = async(pagination) => {
 
             delete filter.page
 
-            result = await Customer.find(filter).skip(offset).limit(limit)  
-            // if(name) {
-            //     result = await Customer.find({
-            //         'name': {$regex: '.*' + name + '.*'}
-            //     }). skip(offset).limit(limit)  
-            // }
-            // else result = await Customer.find({}). skip(offset).limit(limit)     
+            result = await Customer.find(filter).skip(offset).limit(limit)   
        }
        else {
             
             result = await Customer.find({})
        }
-       console.log("hải1111")
+   
        return result 
     } catch (err) {
         return null
